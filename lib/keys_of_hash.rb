@@ -4,17 +4,18 @@ class Hash
   def keys_of(*arguments)
       returnArray = []
 
-      self.each do |k, v|
-          if v == arguments.join
-              returnArray.push(k)
-            # binding.pry
-        elsif v ==  arguments.join.to_i
-            returnArray.push(k)
-        elsif v == arguments.join
-            # binding.pry
-            returnArray.push(k)
+      arguments.each do |arg|
+          self.each do |k, v|
+                # binding.pry
+
+              if v == arg
+                  returnArray.push(k)
+
+            elsif v ==  arg.to_i
+                returnArray.push(k)
+            end
+            end
         end
-    end
     #   binding.pry
     returnArray
   end
