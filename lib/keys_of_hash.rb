@@ -10,11 +10,11 @@ class Hash
             # binding.pry
         elsif v ==  arguments.join.to_i
             returnArray.push(k)
-        elsif *v == arguments.join
+        elsif v == arguments.join
             # binding.pry
             returnArray.push(k)
         end
-      end
+    end
     #   binding.pry
     returnArray
   end
